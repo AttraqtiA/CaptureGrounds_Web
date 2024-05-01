@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class ServiceOrder extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'role_id',
-        'role_type',
+        'so_id',
+        'startingDate',
+        'endingDate',
+        'totalPayment',
+        'note',
+        'acceptedStatus',
     ];
 }

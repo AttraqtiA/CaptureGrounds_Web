@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class PODetail extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'po_id',
+        'quantity',
+        'price',
+        'weight',
+        'order_id',
+        'product_id',
+    ];
 }
