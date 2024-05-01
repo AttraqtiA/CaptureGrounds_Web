@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->date('orderDate');
+            $table->date('shipmentDate');
+            $table->date('arrivedDate');
+            $table->boolean('acceptedByFreelancerStatus');
+            $table->boolean('acceptedByCustomerStatus');
+            $table->string('shipmentStatus');
             $table->timestamps();
         });
     }

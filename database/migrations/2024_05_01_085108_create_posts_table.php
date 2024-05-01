@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->string('description');
+            $table->integer('minimumPrice');
+            $table->integer('maximumPrice');
+            $table->string('location');
+            $table->string('photographerType');
+            $table->string('videographerType');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();
         });
     }

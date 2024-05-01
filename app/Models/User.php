@@ -31,7 +31,6 @@ class User extends Authenticatable
         'isActive',
         'isLogin',
         'role_id',
-        'field_id',
     ];
 
     /**
