@@ -22,19 +22,9 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
-<div class="flex flex-col" style="font-family: 'Montserrat';">
+<body>
+    <div class="flex flex-col" style="font-family: 'Montserrat';">
 
-    <section style="background-image: url('https://www.desktopbackground.org/p/2012/01/28/335376_funny-cats-wallpapers_1920x1080_h.jpg')"
-                class="bg-cover bg-center bg-no-repeat">
-        <div class="w-1/2 mx-auto bg-red-300 pb-8">
-            <h1 class="text-center font-bold text-2xl">Galeri Kochenk</h1>
-            <div class="mx-auto bg-red-600 p-2 lg:p-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 lg:gap-4 justify-items-center">
-                @for ($i = 0; $i < 18; $i++)
-                    <img src="/images/mrfresh.jpeg" alt="cat1" class="rounded-lg w-32 aspect-square">
-                    <img src="/images/guangdang.png" alt="cat1" class="rounded-lg w-32 aspect-square">
-                @endfor
-            </div>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
