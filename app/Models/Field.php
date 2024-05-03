@@ -2,15 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Field extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'field_id',
-        'field_name',
-    ];
+    protected $guarded = ['id'];
 }

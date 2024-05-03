@@ -8,13 +8,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class ServiceOrder extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'so_id',
-        serviceType_id,
-        'startingDate',
-        'endingDate',
-        'totalPayment',
-        'note',
-        'acceptedStatus',
-    ];
+    protected $guarded = ['id'];
 }

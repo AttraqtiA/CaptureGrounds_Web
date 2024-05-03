@@ -2,19 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Review extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'review_id',
-        'image',
-        'review',
-        'rating',
-        'date',
-        'user_id',
-        'service_id',
-    ];
+    protected $guarded = ['id'];
 }

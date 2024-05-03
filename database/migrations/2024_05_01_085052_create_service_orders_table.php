@@ -18,6 +18,10 @@ return new class extends Migration
             $table->integer('totalPayment');
             $table->string('note');
             $table->string('acceptedStatus');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->unsignedBigInteger('services_id');
+            $table->foreign('services_id')->references('id')->on('services')->onUpdate('cascade');
             $table->timestamps();
         });
     }

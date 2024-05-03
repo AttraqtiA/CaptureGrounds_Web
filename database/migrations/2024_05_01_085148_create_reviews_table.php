@@ -17,10 +17,8 @@ return new class extends Migration
             $table->string('review');
             $table->integer('rating');
             $table->date('date');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->unsignedBigInteger('service_id');
-            $table->foreign('service_id')->references('id')->on('services')->onUpdate('cascade');
+            $table->unsignedBigInteger('ServiceOrder_id');
+            $table->foreign('ServiceOrder_id')->references('id')->on('service_orders')->onUpdate('cascade');
             $table->timestamps();
         });
     }
