@@ -10,4 +10,16 @@ class UserField extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function Field()
+{
+    return $this->hasMany(Field::class);
 }
+
+public function User()
+{
+    return $this->hasMany(Field::class);
+}
+
+}
+

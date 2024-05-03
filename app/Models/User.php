@@ -38,4 +38,28 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function Projects()
+    {
+        return $this->belongsTo(Project::class);
+    }
+    public function ServiceOrder()
+    {
+        return $this->belongsTo(ServiceOrder::class);
+    }
+    public function Service()
+    {
+        return $this->belongsTo(Service::class);
+    }
+    public function Order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+    public function Posts()
+    {
+        return $this->belongsTo(Post::class);
+    }
+    public function UserField()
+    {
+        return $this->belongsTo(UserField::class);
+    }
 }
