@@ -139,9 +139,9 @@
                 </li>
 
                 <li>
-                    <a href="/products"
+                    <a href="#offer"
                         class="block py-2 pl-3 pr-4 {{ $active_2 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}"
-                        aria-current="page">Products</a>
+                        aria-current="page">Offer</a>
                 </li>
 
                 <li>
