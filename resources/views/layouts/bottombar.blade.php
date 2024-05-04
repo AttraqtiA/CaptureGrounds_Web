@@ -1,13 +1,13 @@
-<footer class="p-4 bg-gray-900 sm:p-6">
+<footer class="p-4 bg-neutral-950 sm:p-6 border-t border-neutral-700">
     <div class="mx-auto">
         <div class="text-white flex flex-col md:flex-row justify-center gap-6 px-4 md:px-0">
-            <div class="mt-6 md:mt-0 w-32">
+            <div class="mt-6 md:mt-0">
                 <a href="/" class="">
-                    <img src="/images/lisahwan_logo.crdownload" class="mr-3 w-16 sm:w-24" alt="Gosyen Logo" />
+                    <img src="/images/logo_white.png" class="w-24" alt="CG Logo" />
                 </a>
             </div>
             <div class="w-full md:w-1/2">
-                <h2 class="mb-6 text-lg font-semibold uppercase">Captuire</h2>
+                <img src="/images/CaptureGrounds_title.png" class="h-6 my-4" alt="CG Logo" />
                 <p>Premium, Teri Oven, Balado, Kerupuk, Kentang, Dendeng, Snacks, Cemilan, Kualitas, Homemade, Terlaris,
                     Fast
                     Respon, Enak</p>

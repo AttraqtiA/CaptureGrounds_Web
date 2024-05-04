@@ -1,7 +1,8 @@
-<nav class="bg-gray-900 w-full z-20 top-0 left-0 border-b border-black">
+<nav class="fixed bg-neutral-950 w-full z-20 top-0 left-0 border-b border-neutral-700">
     <div class="flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-8">
         <a href="/" class="flex items-center">
-            <img src="/images/lisahwan_logo.crdownload" class="mr-3 w-16" alt="Lisahwan Logo" />
+            <img src="/images/logo_white.png" class="mr-2 w-16" alt="CG Logo" />
+            <img src="/images/CaptureGrounds_title.png" class="h-5" alt="CG Logo" />
         </a>
         <div class="flex md:order-2">
 
@@ -11,8 +12,8 @@
                     @if (Auth::user()->isAdmin())
                         <li>
                             <a href="{{ route('admin.admin') }}"
-                                class="block py-2 pl-3 pr-4 {{ $active_5 ?? 'text-white rounded hover:bg-yellow-500 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:hover:bg-transparent' }}">
-                                <svg class="w-6 h-6 text-white hover:text-yellow-500" aria-hidden="true"
+                                class="block py-2 pl-3 pr-4 {{ $active_5 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">
+                                <svg class="w-6 h-6 text-white hover:text-yellow-400" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path
                                         d="M7.824 5.937a1 1 0 0 0 .726-.312 2.042 2.042 0 0 1 2.835-.065 1 1 0 0 0 1.388-1.441 3.994 3.994 0 0 0-5.674.13 1 1 0 0 0 .725 1.688Z" />
@@ -22,7 +23,6 @@
                             </a>
                         </li>
                     @endif
-
                 @endauth
 
                 <!-- Authentication Links -->
@@ -42,19 +42,19 @@
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow"
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
-                            <p class="text-sm text-gray-900" role="none">
+                            <p class="text-sm text-neutral-950" role="none">
                                 Register yourself!
                             </p>
                         </div>
                         <ul class="py-1" role="none">
                             <li>
                                 <a href="{{ route('register') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-500"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
                                     role="menuitem">Sign up</a>
                             </li>
                             <li>
                                 <a href="{{ route('login') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-500"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
                                     role="menuitem">Login</a>
                             </li>
                         </ul>
@@ -62,7 +62,7 @@
                 @else
                     <div class="">
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring focus:ring-gray-500"
+                            class="flex text-sm bg-neutral-900 rounded-full focus:ring focus:ring-gray-500"
                             aria-expanded="false" data-dropdown-toggle="dropdown-user">
                             <span class="sr-only">Open user menu</span>
                             @if (Auth::user()->profilePicture == null)
@@ -84,20 +84,20 @@
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
                             @if (Auth::user()->isAdmin())
-                                <p class="text-sm text-gray-900" role="none">
+                                <p class="text-sm text-neutral-950" role="none">
                                     Selamat datang kembali, Admin!
                                 </p>
                             @else
-                                <p class="text-sm text-gray-900" role="none">
+                                <p class="text-sm text-neutral-950" role="none">
                                     Hello there! Welcome back!
                                 </p>
                             @endif
 
                             <br>
-                            <p class="text-sm text-gray-900" role="none">
+                            <p class="text-sm text-neutral-950" role="none">
                                 {{ Auth::user()->name }}
                             </p>
-                            <p class="text-sm font-medium text-gray-900 truncate" role="none">
+                            <p class="text-sm font-medium text-neutral-950 truncate" role="none">
                                 {{ Auth::user()->email }}
                             </p>
                         </div>
@@ -105,7 +105,7 @@
                             <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-500" role="menuitem">
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400" role="menuitem">
                                     Keluar
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -118,7 +118,7 @@
             </ul>
 
             <button data-collapse-toggle="navbar-sticky" type="button"
-                class="mt-2 ml-2 md:ml-4 inline-flex items-center p-2 w-10 h-10 justify-center text-sm bg-gray-900 border border-gray-500 text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+                class="mt-2 ml-2 md:ml-4 inline-flex items-center p-2 w-10 h-10 justify-center text-sm bg-neutral-950 border border-gray-500 text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
                 aria-controls="navbar-sticky" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -131,27 +131,27 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
 
             <ul
-                class="flex flex-col p-4 md:p-0 font-medium rounded-lg bg-gray-900 md:flex-row md:space-x-8  md:border-0 md:bg-gray-900">
+                class="flex flex-col p-4 md:p-0 font-medium rounded-lg bg-neutral-950 md:flex-row md:space-x-8  md:border-0 md:bg-neutral-950">
 
                 <li>
                     <a href="/"
-                        class="block py-2 pl-3 pr-4 {{ $active_1 ?? 'text-white rounded hover:bg-yellow-500 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:hover:bg-transparent' }}">Home</a>
+                        class="block py-2 pl-3 pr-4 {{ $active_1 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Home</a>
                 </li>
 
                 <li>
                     <a href="/products"
-                        class="block py-2 pl-3 pr-4 {{ $active_2 ?? 'text-white rounded hover:bg-yellow-500 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:hover:bg-transparent' }}"
+                        class="block py-2 pl-3 pr-4 {{ $active_2 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}"
                         aria-current="page">Products</a>
                 </li>
 
                 <li>
                     <a href="/gallery"
-                        class="block py-2 pl-3 pr-4 {{ $active_3 ?? 'text-white rounded hover:bg-yellow-500 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:hover:bg-transparent' }}">Gallery</a>
+                        class="block py-2 pl-3 pr-4 {{ $active_3 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Gallery</a>
                 </li>
 
                 <li>
                     <a href="/contactus"
-                        class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-500 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:hover:bg-transparent' }}">Contact
+                        class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Contact
                         us</a>
                 </li>
             </ul>
