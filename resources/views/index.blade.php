@@ -64,8 +64,8 @@
         </div>
     </section>
 
-    <section id="Join_now" class="bg-black bg-opacity-75 py-24">
-        <div class="container mx-auto text-center">
+    <section id="Join_now" class="py-24" style="background-image: url('/images/reinhart-julian-WxM465oM4j4-unsplash.png'); background-size: cover; background-position: center; background-color: rgba(0, 0, 0, 0.5);">
+        <div class="container mx-auto text-center bg-black bg-opacity-75">
             <h1 class="text-white font-bold text-5xl md:text-6xl lg:text-7xl mb-8">Benefit</h1>
             <p class="text-white font-normal text-lg md:text-xl">Unlock new opportunities to grow your business! With our comprehensive search filters</p>
             <p class="text-white font-normal text-lg md:text-xl">and secure booking system, finding customers has never been easier.</p>
