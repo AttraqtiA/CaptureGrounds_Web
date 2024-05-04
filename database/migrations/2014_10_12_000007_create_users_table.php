@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('profilePicture');
+
             $table->string('name');
             $table->string('gender');
             $table->integer('phoneNumber');
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('isMembership');
+            $table->string('profilePicture')->nullable(); // AKU SET NULLABLE YA INI
             $table->enum('isActive',['0','1'])->default('0');
             $table->enum('isLogin',['0','1'])->default('0');
             $table->unsignedBigInteger('role_id');

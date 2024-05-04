@@ -14,14 +14,16 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('roles')->insert([
-            'role_name'=>'Admin'
+        Role::create([
+            'role_name' => 'Admin',
         ]);
-        DB::table('roles')->insert([
-            'role_name'=>'freelancer'
+
+        Role::create([
+            'role_name' => 'Worker',
         ]);
-        DB::table('roles')->insert([
-            'role_name'=>'User'
+
+        Role::create([
+            'role_name' => 'Customer',
         ]);
     }
 }

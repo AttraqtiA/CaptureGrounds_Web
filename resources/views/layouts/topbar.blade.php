@@ -145,12 +145,12 @@
                 </li>
 
                 <li>
-                    <a href="/gallery"
+                    <a href="/"
                         class="block py-2 pl-3 pr-4 {{ $active_3 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Gallery</a>
                 </li>
 
                 <li>
-                    <a href="/contactus"
+                    <a href="/"
                         class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Contact
                         us</a>
                 </li>
