@@ -2,20 +2,29 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Project extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'project_id',
-        'title',
-        'description',
-        'date',
-        'workDuration',
-        'location',
-        'serviceType',
-        'so_id'
-    ];
+    protected $guarded = ['id'];
+
+    public function ServiceOrder()
+    {
+        return $this->belongsTo(ServiceOrder::class);
+    }
+    public function User()
+    {
+        return $this->hasMany(User::class);
+    }
+    public function PhotoResults()
+    {
+        return $this->belongsTo(PhotoResults::class);
+    }
+    public function VideoResults()
+    {
+        return $this->belongsTo(VideoResults::class);
+    }
+
 }

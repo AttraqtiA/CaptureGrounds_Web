@@ -17,21 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'user_id',
-        'profilePicture',
-        'name',
-        'gender',
-        'phoneNumber',
-        'city',
-        'country',
-        'email',
-        'password',
-        'isMembership',
-        'isActive',
-        'isLogin',
-        'role_id',
-    ];
+    protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -52,4 +38,28 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function Projects()
+    {
+        return $this->belongsTo(Project::class);
+    }
+    public function ServiceOrder()
+    {
+        return $this->belongsTo(ServiceOrder::class);
+    }
+    public function Service()
+    {
+        return $this->belongsTo(Service::class);
+    }
+    public function Order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+    public function Posts()
+    {
+        return $this->belongsTo(Post::class);
+    }
+    public function UserField()
+    {
+        return $this->belongsTo(UserField::class);
+    }
 }

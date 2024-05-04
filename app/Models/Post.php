@@ -2,23 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'post_id',
-        'image',
-        'title',
-        'description',
-        'minimumPrice',
-        'maximumPrice',
-        'location',
-        'photographerType',
-        'videographerType',
-        'user_id'
-    ];
+    protected $guarded = ['id'];
+    public function User()
+{
+    return $this->hasMany(Field::class);
+}
+
 }

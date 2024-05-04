@@ -8,13 +8,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class ServiceOrder extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'so_id',
-        serviceType_id,
-        'startingDate',
-        'endingDate',
-        'totalPayment',
-        'note',
-        'acceptedStatus',
-    ];
+    protected $guarded = ['id'];
+
+    public function Service()
+    {
+        return $this->hasMany(Service::class);
+    }
+    public function Projects()
+    {
+        return $this->belongsTo(Project::class);
+    }
+
+    public function User()
+    {
+        return $this->hasMany(User::class);
+    }
 }

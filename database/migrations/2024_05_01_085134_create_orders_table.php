@@ -19,6 +19,8 @@ return new class extends Migration
             $table->boolean('acceptedByFreelancerStatus');
             $table->boolean('acceptedByCustomerStatus');
             $table->string('shipmentStatus');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();
         });
     }

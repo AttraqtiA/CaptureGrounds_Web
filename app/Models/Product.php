@@ -8,13 +8,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'product_id',
-        'image',
-        'name',
-        'description',
-        'price',
-        'stock',
-        'weight',
-    ];
+    protected $guarded = ['id'];
+
+    public function ProductOrderDetail()
+    {
+        return $this->belongsTo(PODetail::class);
+    }
 }
