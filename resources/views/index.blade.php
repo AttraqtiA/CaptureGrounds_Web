@@ -24,8 +24,7 @@
 
     <section id="offer" class="bg-white py-24">
         <div class="container mx-auto px-4 md:px-0 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What</h1>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Do <span class="text-yellow-400">We Offer ?</span></h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-16">What do we<br><span class="text-yellow-400">Offer ?</span></h1>
 
             <div class="flex flex-col md:flex-row justify-center md:space-x-12 lg:space-x-24">
 
@@ -64,15 +63,22 @@
         </div>
     </section>
 
-    <section id="Join_now" class="py-24" style="background-image: url('/images/reinhart-julian-WxM465oM4j4-unsplash.png'); background-size: cover; background-position: center; background-color: rgba(0, 0, 0, 0.5);">
-        <div class="container mx-auto text-center bg-black bg-opacity-75">
-            <h1 class="text-white font-bold text-5xl md:text-6xl lg:text-7xl mb-8">Benefit</h1>
-            <p class="text-white font-normal text-lg md:text-xl">Unlock new opportunities to grow your business! With our comprehensive search filters</p>
-            <p class="text-white font-normal text-lg md:text-xl">and secure booking system, finding customers has never been easier.</p>
-            <p class="text-white font-normal text-lg md:text-xl mb-8"> Expand your portfolio!</p>
-            <a href="https://www.figma.com/file/pw7eT86kzEmSIkfGUe91iz/Capture-Grounds?type=design&node-id=67%3A2&mode=design&t=PzOQ9YTSoleiprEO-1" class="bg-yellow-400 text-black font-bold text-lg py-3 px-8 rounded-lg inline-block">Join Now</a>
-        </div>
-    </section>
+    <section style="background-image: url('/images/reinhart-julian-WxM465oM4j4-unsplash.png')"
+    class="bg-cover bg-center bg-no-repeat bg-neutral-500 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center text-white py-16 lg:py-32">
+        <h2 class="text-center text-yellow-400 mb-20 text-4xl font-medium">Tons of Benefit!<br><mark
+                class="px-2 text-white bg-transparent rounded">Unlock new opportunities to grow your business! With our comprehensive search filters!</mark></h2>
+
+        @guest
+            <a href="{{ route('register') }}"
+                class="inline-flex justify-center items-center py-4 px-7 text-lg font-bold text-center text-neutral-950 rounded-xl bg-yellow-400 hover:bg-yellow-300 focus:ring-4 focus:ring-yellow-300">
+                Join Now
+            </a>
+        @endguest
+
+
+    </div>
+</section>
 
     @include('layouts.jumbotron_register')
 @endsection
