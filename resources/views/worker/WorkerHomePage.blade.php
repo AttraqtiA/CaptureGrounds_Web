@@ -7,7 +7,7 @@
         <img src="images/reinhart-julian-WxM465oM4j4-unsplash.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full mb-8 lg:float-left lg:mb-0 border-4 border-yellow-400">
         <div class="text-center lg:text-left p-4 lg:pl-4 lg:pr-8"> <!-- Adjusted padding-left to lg:pl-4 -->
             <h2 class="text-3xl font-bold text-yellow-400">Hi John Doe,</h2>
-            <p class="text-lg text-white ">rawdog@gmail.com</p>
+            <p class="text-lg text-white ">sheeesh@gmail.com</p>
             <p class="text-lg text-white">Berkley</p>
         </div>
     </div>
