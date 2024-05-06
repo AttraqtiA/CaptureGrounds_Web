@@ -22,3 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/chat', [App\Http\Controllers\MessageController::class, 'chat_page'])->name('chatPage');
+
+Route::post('/pm', [App\Http\Controllers\MessageController::class, 'store'])->name('postMessage');
