@@ -18,7 +18,9 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// LOFERVER
+Route::get('/projectList', [App\Http\Controllers\ProjectController::class, 'index'])->name('projectList.index');

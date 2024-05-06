@@ -10,17 +10,22 @@ class ServiceOrder extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    public function Service()
+    public function Services()
     {
-        return $this->hasMany(Service::class);
-    }
-    public function Projects()
-    {
-        return $this->belongsTo(Project::class);
+        return $this->belongsTo(Service::class, 'service_id', 'id');
     }
 
-    public function User()
+    public function Projects()
     {
-        return $this->hasMany(User::class);
+        return $this->hasOne(Project::class, 'serviceOrder_id', 'id');
+    }
+
+    public function Users()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function Reviews(){
+        return $this->hasMany(Review::class, 'serveOrder_id', 'id');
     }
 }

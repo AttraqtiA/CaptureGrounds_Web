@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('video_results', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('projects_id');
-            $table->foreign('projects_id')->references('id')->on('projects')->onUpdate('cascade');
-            $table->string('url');
+            $table->unsignedBigInteger('project_id');
+            $table->foreign('project_id')->references('id')->on('projects')->onUpdate('cascade');
+            $table->string('url')->nullable(false);
             $table->timestamps();
         });
     }

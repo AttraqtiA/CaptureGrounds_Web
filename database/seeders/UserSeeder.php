@@ -15,36 +15,53 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'Samuel',
+            'name' => 'Lie, Samuel',
             'gender' => 'Male',
             'phoneNumber' => '0812345',
             'city' => 'Semarang',
             'country' => 'Indonesia',
-            'role_id' => 1, // DI USER FACTORY ROLENYA 1, Admin
-            'isLogin' => '0',
-            'isActive' => '1',
+            'profilePicture' => null,
             'email' => 'admin_cg@gmail.com',
             'email_verified_at' => now(),
-            'password' => bcrypt('jorenganteng'),
-            'isMembership' => true,
-            'profilePicture' => null,
+            'password' => bcrypt('adminCaptureGrounds'),
+            'isLogin' => '0',
+            'isActive' => '1',
+            'isMembership' => '0',
+            'role_id' => 1,
             'remember_token' => Str::random(10),
         ]);
 
         User::create([
-            'name' => 'Yobel',
+            'name' => 'Joren',
             'gender' => 'Male',
-            'phoneNumber' => '7823542',
+            'phoneNumber' => '0812345',
             'city' => 'Surabaya',
             'country' => 'Indonesia',
-            'role_id' => 3, // DI USER FACTORY ROLENYA 3, member
+            'profilePicture' => null,
+            'email' => 'worker_cg@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('workerCaptureGrounds'),
             'isLogin' => '0',
             'isActive' => '1',
-            'email' => 'yobel@gmail.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('yobelganteng'),
-            'isMembership' => false,
+            'isMembership' => '0',
+            'role_id' => 2,
+            'remember_token' => Str::random(10),
+        ]);
+
+        User::create([
+            'name' => 'Louis Fernando',
+            'gender' => 'Male',
+            'phoneNumber' => '0812345',
+            'city' => 'Surabaya',
+            'country' => 'Indonesia',
             'profilePicture' => null,
+            'email' => 'customer_cg@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('customerCaptureGrounds'),
+            'isLogin' => '0',
+            'isActive' => '1',
+            'isMembership' => '0',
+            'role_id' => 3,
             'remember_token' => Str::random(10),
         ]);
 

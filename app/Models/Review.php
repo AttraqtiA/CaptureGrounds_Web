@@ -9,9 +9,9 @@ class Review extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    public function ServiceOrder()
-    {
-        return $this->hasMany(ServiceOrder::class);
-    }
 
+    public function ServiceOrders()
+    {
+        return $this->belongsTo(ServiceOrder::class, 'serviceOrder_id', 'id');
+    }
 }

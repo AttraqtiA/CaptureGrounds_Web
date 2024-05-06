@@ -13,19 +13,18 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-
-            $table->string('name');
-            $table->string('gender');
-            $table->integer('phoneNumber');
-            $table->string('city');
-            $table->string('country');
+            $table->string('name')->nullable(false);
+            $table->string('gender')->nullable(false);
+            $table->bigInteger('phoneNumber')->nullable(false);
+            $table->string('city')->nullable(false);
+            $table->string('country')->nullable(false);
+            $table->string('profilePicture')->nullable(true); // AKU SET NULLABLE YA INI
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('isMembership');
-            $table->string('profilePicture')->nullable(); // AKU SET NULLABLE YA INI
-            $table->enum('isActive',['0','1'])->default('0');
             $table->enum('isLogin',['0','1'])->default('0');
+            $table->enum('isActive',['0','1'])->default('0');
+            $table->enum('isMembership',['0','1'])->default('0');
             $table->unsignedBigInteger('role_id');
             $table->foreign('role_id')->references('id')->on('roles')->onUpdate('cascade');
             $table->rememberToken();

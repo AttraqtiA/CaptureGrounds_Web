@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->string('price');
+            $table->string('title')->nullable(false);
+            $table->string('image')->nullable(false);
+            $table->string('description')->nullable(false);
+            $table->bigInteger('price')->nullable(false);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();
         });
     }
