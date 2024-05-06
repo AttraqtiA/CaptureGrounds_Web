@@ -38,6 +38,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isAdmin(): bool{
+        if ($this->role_id == 1) {
+            return true;
+    }
+    return false;
+}
+    public function isWorker(): bool{
+    if ($this->role_id == 2) {
+        return true;
+    }
+    return false;
+}
+    public function isCustomer(): bool{
+    if ($this->role_id == 3) {
+        return true;
+    }
+    return false;
+}
     public function Projects()
     {
         return $this->belongsTo(Project::class);
