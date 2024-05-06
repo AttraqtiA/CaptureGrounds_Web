@@ -20,7 +20,7 @@
             <div class="col-span-2 lg:col-span-1 bg-white rounded-lg p-8 mb-4">
                 <div class = "bg-white rounded-lg shadow-md p-8 mb-4">
                     <p class="text-3xl font-bold text-yellow-400">Description</p>
-                    <p class="text-1xlfont-bold text-black mb-4">This nigga drake is such a bitch all he does is talk shit cant even back it up</p>
+                    <p class="text-1xlfont-bold text-black mb-4">The art of looking at the shooting stars is more than enough for me</p>
                 </div>
                 <!-- Stats Section -->
                 <div class="mb-8">
@@ -88,7 +88,6 @@
                             </div>
 
                         </div>
-                        <!-- Add more trending items here -->
                     </div>
                 </div>
             </div>

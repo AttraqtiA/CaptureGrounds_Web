@@ -12,15 +12,13 @@
         </div>
     </div>
     <div class="p-9">
-        <!-- Profile Section -->
 
-        <!-- Stats and Search Bar Section -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
             <div class="col-span-2 lg:col-span-1 bg-white rounded-lg p-8 mb-4">
                 <div class = "bg-white rounded-lg shadow-md p-8 mb-4">
                     <p class="text-3xl font-bold text-yellow-400">Description</p>
-                    <p class="text-1xlfont-bold text-black mb-4">This nigga drake is such a bitch all he does is talk shit cant even back it up</p>
+                    <p class="text-1xlfont-bold text-black mb-4">The art of looking at the shooting stars is more than enough for me</p>
                 </div>
                 <!-- Stats Section -->
                 <div class="mb-8">
@@ -42,7 +40,7 @@
                         </div>
 
                         <!-- Usage Experience -->
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 lg:grid-cols-2 gap-4">
                         <div class="bg-black rounded-lg shadow-md p-4 mb-4">
                             <p class="text-lg font-bold text-yellow-400 text-center">Usage Experience</p>
                             <p class="text-lg font-bold text-white text-center">2 years</p>
@@ -76,15 +74,17 @@
                 </div>
                 <div class="flex flex-wrap justify-center lg:flex-col">
                     <div class="container mx-auto flex flex-col lg:flex-row">
-                        <div class="w-full lg:w-1/2 px-2 mb-4">
-                            <div class="bg-white rounded-lg shadow-md p-4">
+                        <div class="w-full lg:w-1/2 mb-4">
+                            <div class="bg-black rounded-lg shadow-md pb-5">
                                 <img src="images/reinhart-julian-WxM465oM4j4-unsplash.png" alt="Trending Picture" class="w-full h-48 object-cover rounded-t-lg mb-4">
-                                <h3 class="text-xl font-bold text-yellow-400 mb-2">Silvia-Photographer</h3>
-                                <p class="text-black font-bold text-center">Description of Silvia goes here...</p>
+                                <div class="p-4">
+                                <h3 class="text-xl font-bold text-center text-yellow-400">Silvia-Photographer</h3>
+                                <p class="text-white font-bold text-center pb-4">Description of Silvia goes here...</p>
+                            </div>
                             </div>
 
+
                         </div>
-                        <!-- Add more trending items here -->
                     </div>
                 </div>
             </div>
