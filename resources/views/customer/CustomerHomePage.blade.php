@@ -81,12 +81,14 @@
                     <div class="container mx-auto flex flex-col lg:flex-row">
                         <div class="w-full lg:w-1/2 mb-4">
                             @foreach ($recommended as $rec)
+                            <a href="{{ route('worker_profile', $rec->id) }}">
                             <div class="bg-black rounded-lg shadow-md pb-5">
                                 <img src="images/reinhart-julian-WxM465oM4j4-unsplash.png" alt="Trending Picture" class="w-full h-48 object-cover rounded-t-lg mb-4">
                                 <div class="p-4">
                                 <h3 class="text-xl font-bold text-center text-yellow-400">{{ $rec->name }}</h3>
                                 <p class="text-white font-bold text-center pb-4">Description of Silvia goes here...</p>
                             </div>
+                        </a>
                             @endforeach
                             </div>
 

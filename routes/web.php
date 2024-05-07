@@ -24,5 +24,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController::class, 'index']);
 Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index']);
+Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');
+
 
 
