@@ -65,5 +65,6 @@
     </div>
 </section>
 
+
     @include('layouts.jumbotron_register')
 @endsection

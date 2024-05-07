@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('serviceType');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+
             $table->unsignedBigInteger('ServiceOrders');
             $table->foreign('ServiceOrders')->references('id')->on('service_orders')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
