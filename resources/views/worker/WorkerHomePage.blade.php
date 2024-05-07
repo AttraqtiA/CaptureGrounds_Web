@@ -64,8 +64,6 @@
                     <input type="text" placeholder="Search..." class="w-full bg-white mt-4 px-4 py-2 rounded-lg focus:outline-none">
                 </div>
             </div>
-
-
             <div class="col-span-2 lg:col-span-1 bg-white rounded-lg shadow-md p-3 mb-4">
                 <section style="background-image: url('/images/reinhart-julian-WxM465oM4j4-unsplash.png')"
                 class="bg-cover bg-center bg-no-repeat bg-neutral-500 bg-blend-multiply rounded-md py-1 lg:py-1">
