@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\MessageController;
-
 use App\Http\Controllers\HomeController;
+
+use App\Http\Controllers\MessageController;
 
 
 /*
@@ -66,8 +66,6 @@ Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::cl
 Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');
 
 
-
-=======
 });
 //=====================================================================================================
 
