@@ -19,7 +19,10 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             ServiceSeeder::class,
-            ServiceOrderSeeder::class
+            ServiceOrderSeeder::class,
+            ProjectSeeder::class,
+            PhotoResultsSeeder::class,
+            VideoResultsSeeder::class
         ]);
     }
 }

@@ -3,7 +3,7 @@
         <div class="text-white flex flex-col md:flex-row justify-center gap-6 px-4 md:px-0">
             <div class="mt-6 md:mt-0">
                 <a href="/" class="">
-                    <img src="/images/logo_white.png" class="w-24" alt="CG Logo" />
+                    <img src="/images/captureGrounds_logo.png" class="w-24" alt="CG Logo" />
                 </a>
             </div>
             <div class="w-full md:w-1/2">

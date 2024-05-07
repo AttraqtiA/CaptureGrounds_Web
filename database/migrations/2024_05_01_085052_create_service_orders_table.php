@@ -17,7 +17,8 @@ return new class extends Migration
             $table->date('endingDate')->nullable(false);
             $table->bigInteger('totalPayment')->nullable(false);
             $table->string('note')->nullable(true);
-            $table->enum('acceptedStatus',['yes','no'])->default('no');;
+            $table->enum('acceptedStatus',['yes','no'])->default('no');
+            $table->enum('finishedStatus',['yes','no'])->default('no');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->unsignedBigInteger('service_id');

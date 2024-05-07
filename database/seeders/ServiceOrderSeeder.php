@@ -18,7 +18,8 @@ class ServiceOrderSeeder extends Seeder
             'endingDate' => '2024-04-16',
             'totalPayment' =>  1000000,
             'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
-            'acceptedStatus' =>  'no',
+            'acceptedStatus' =>  'yes',
+            'finishedStatus' => 'yes',
             'user_id' => 3,
             'service_id' => 1
         ]);
@@ -29,6 +30,40 @@ class ServiceOrderSeeder extends Seeder
             'totalPayment' =>  1000000,
             'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
             'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
+            'user_id' => 3,
+            'service_id' => 1
+        ]);
+
+        ServiceOrder::create([
+            'startingDate' => '2024-04-12',
+            'endingDate' => '2024-04-16',
+            'totalPayment' =>  1000000,
+            'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
+            'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
+            'user_id' => 3,
+            'service_id' => 1
+        ]);
+
+        ServiceOrder::create([
+            'startingDate' => '2024-04-12',
+            'endingDate' => '2024-04-16',
+            'totalPayment' =>  1000000,
+            'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
+            'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
+            'user_id' => 3,
+            'service_id' => 1
+        ]);
+
+        ServiceOrder::create([
+            'startingDate' => '2024-04-12',
+            'endingDate' => '2024-04-16',
+            'totalPayment' =>  1000000,
+            'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
+            'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
             'user_id' => 3,
             'service_id' => 1
         ]);
@@ -39,6 +74,7 @@ class ServiceOrderSeeder extends Seeder
             'totalPayment' =>  1000000,
             'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
             'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
             'user_id' => 3,
             'service_id' => 1
         ]);
@@ -49,6 +85,7 @@ class ServiceOrderSeeder extends Seeder
             'totalPayment' =>  1000000,
             'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
             'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
             'user_id' => 3,
             'service_id' => 1
         ]);
@@ -59,6 +96,7 @@ class ServiceOrderSeeder extends Seeder
             'totalPayment' =>  1000000,
             'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
             'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
             'user_id' => 3,
             'service_id' => 1
         ]);
@@ -69,6 +107,7 @@ class ServiceOrderSeeder extends Seeder
             'totalPayment' =>  1000000,
             'note' => 'Kindly note that we expect you to capture the essence of our event with your expertise and creativity. Please ensure to highlight the unique moments and emotions throughout the occasion.',
             'acceptedStatus' =>  'no',
+            'finishedStatus' => 'no',
             'user_id' => 3,
             'service_id' => 1
         ]);

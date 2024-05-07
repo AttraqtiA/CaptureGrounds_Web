@@ -24,3 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // LOFERVER
 Route::get('/projectList', [App\Http\Controllers\ProjectController::class, 'index'])->name('projectList.index');
+Route::get('/projectList/{project}', [App\Http\Controllers\ProjectController::class, 'show'])->name('projectList.show');

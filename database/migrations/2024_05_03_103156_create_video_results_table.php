@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('video_results', function (Blueprint $table) {
+        Schema::create('videoresult', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')->references('id')->on('projects')->onUpdate('cascade');

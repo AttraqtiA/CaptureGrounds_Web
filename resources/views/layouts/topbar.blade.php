@@ -1,7 +1,7 @@
 <nav class="fixed bg-neutral-950 w-full z-20 top-0 left-0 border-b border-neutral-700">
     <div class="flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-8">
         <a href="/" class="flex items-center">
-            <img src="/images/logo_white.png" class="mr-2 w-16" alt="CG Logo" />
+            <img src="/images/captureGrounds_logo.png" class="mr-2 w-14" alt="CG Logo" />
             <img src="/images/CaptureGrounds_title.png" class="h-5" alt="CG Logo" />
         </a>
         <div class="flex md:order-2">
