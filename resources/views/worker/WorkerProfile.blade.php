@@ -6,7 +6,7 @@
     <div class="bg-black p-10">
         <img src="images/reinhart-julian-WxM465oM4j4-unsplash.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full mb-8 lg:float-left lg:mb-0 border-4 border-yellow-400">
         <div class="text-center lg:text-left p-4 lg:pl-4 lg:pr-8"> <!-- Adjusted padding-left to lg:pl-4 -->
-            <h2 class="text-3xl font-bold text-yellow-400">Hi {{ $user->name }},</h2>
+            <h2 class="text-3xl font-bold text-yellow-400">{{ $user->name }}'s profile</h2>
             <div class = "lg:text-right">
             <p class="text-lg text-white ">{{ $user->email }}</p>
             <p class="text-lg text-white">{{ $user->city }}, {{ $user->country }}</p>
@@ -60,32 +60,47 @@
                 </div>
 
 
-                    <div class = "bg-white rounded-lg shadow-md p-8 mb-4">
-                    <input type="text" placeholder="Search..." class="w-full bg-white mt-4 px-4 py-2 rounded-lg focus:outline-none">
+                    <div class = " text-center mb-4 bg-white rounded-lg shadow-md p-8 mb-4">
+                        <a href = "/hire">
+                            <button class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded focus:outline-none">Hire Now</button>
+                            </a>
                 </div>
             </div>
 
 
             <div class="col-span-2 lg:col-span-1 bg-white rounded-lg shadow-md p-3 mb-4">
-                <section style="background-image: url('/images/reinhart-julian-WxM465oM4j4-unsplash.png')"
-                class="bg-cover bg-center bg-no-repeat bg-neutral-500 bg-blend-multiply rounded-md py-1 lg:py-1">
-                <div class="px-4 mx-auto max-w-screen-xl text-center text-white">
-                    <h2 class="text-center text-yellow-400 mb-10 lg:mb-10 mt-10 text-5xl font-medium">Add Portfolio!<br></h2>
-                </div>
-            </section>
+
 
                 <div class="text-center mb-4">
-                    <h2 class="text-2xl font-bold text-black">Your <span class="text-yellow-400">Services</span></h2>
+                    <h2 class="text-2xl font-bold text-black">{{ $user->name }}’s Project <span class="text-yellow-400"></span></h2>
                 </div>
-                <div class="flex flex-wrap justify-center lg:flex-col">
-                    <div class="container mx-auto flex flex-col lg:flex-row">
-                        <div class="w-full lg:w-1/2 px-2 mb-4">
 
+                <div class=" justify-center lg:flex-col grid grid-cols-1">
+                    <div class="container mx-auto flex flex-col lg:flex-row">
+                        <div class="w-full px-2 mb-7">
+                            <h3 class="text-xl font-bold text-black">The GREAT WALL OF CHINA</h3>
+                            <p class="text-black">The king of spirit</p>
+                            <div class="bg-black rounded-lg shadow-md ">
+                                <img src="/images/reinhart-julian-WxM465oM4j4-unsplash.png" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <img src="/images/reinhart-julian-WxM465oM4j4-unsplash.png" class=" w-full h-36 object-cover rounded-t-lg mb-4">
+                                <img src="/images/reinhart-julian-WxM465oM4j4-unsplash.png" class="w-full h-36 object-cover rounded-t-lg mb-4">
+                            </div>
+                            <h3 class="text-xl font-bold text-black">Tokyo Muse</h3>
+                            <p class="text-black">My muse</p>
+                            <div class="bg-black rounded-lg shadow-md ">
+                                <img src="/images/reinhart-julian-WxM465oM4j4-unsplash.png" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <img src="/images/reinhart-julian-WxM465oM4j4-unsplash.png" class=" w-full h-36 object-cover rounded-t-lg mb-4">
+                                <img src="/images/reinhart-julian-WxM465oM4j4-unsplash.png" class="w-full h-36 object-cover rounded-t-lg mb-4">
+                            </div>
                             @foreach ($allservice as $ser)
+                            <h3 class="text-xl font-bold text-center text-yellow-400 p-4">{{ $ser->title }}</h3>
+                            <p class="text-white font-bold text-center p-2">{{ $ser->description }}</p>
                             <div class="bg-black rounded-lg shadow-md ">
                                 <img src="images/{{ $ser->images }}" class="w-full h-48 object-cover rounded-t-lg mb-4">
-                                <h3 class="text-xl font-bold text-center text-yellow-400 p-4">{{ $ser->title }}</h3>
-                                <p class="text-white font-bold text-center p-2">{{ $ser->description }}</p>
                             </div>
                             @endforeach
 

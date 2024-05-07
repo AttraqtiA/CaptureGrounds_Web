@@ -2,7 +2,7 @@
 
 @section('content_page')
 
-<section class="pt-24 w-full bg-white">
+<section class="pt-20 w-full bg-white">
 
     <div class="bg-black p-10 gap-10 " style="background-image: url('')">
 
@@ -86,7 +86,7 @@
                                 <img src="images/reinhart-julian-WxM465oM4j4-unsplash.png" alt="Trending Picture" class="w-full h-48 object-cover rounded-t-lg mb-4">
                                 <div class="p-4">
                                 <h3 class="text-xl font-bold text-center text-yellow-400">{{ $rec->name }}</h3>
-                                <p class="text-white font-bold text-center pb-4">Description of Silvia goes here...</p>
+                                <p class="text-white font-bold text-center pb-4">{{ $rec->description }}</p>
                             </div>
                         </a>
                             @endforeach

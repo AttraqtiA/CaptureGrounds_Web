@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Review;
+use App\Models\Project;
 
 use App\Models\Service;
 use App\Models\ServiceOrder;
@@ -81,8 +82,8 @@ class Worker_profileController extends Controller
     })->get();
     $totalRating = $reviews->sum('rating');
     $averageRating = $reviews->isEmpty() ? 0 : $totalRating / $reviews->count();
-    $service = Service::where('user_id',$id)->get();
-        return view('worker.WorkerHomePage', ['user'=>$user, 'mostprefferedservice'=>$mostPreferredService, 'experienceapp'=>$usageDuration, 'averagerating'=>$averageRating, 'countrating'=> $reviews->count(), 'allservice'=>$service]);
+    $service = Project::where('user_id',$id)->get();
+        return view('worker.WorkerProfile', ['user'=>$user, 'mostprefferedservice'=>$mostPreferredService, 'experienceapp'=>$usageDuration, 'averagerating'=>$averageRating, 'countrating'=> $reviews->count(), 'allservice'=>$service]);
 
     }
 

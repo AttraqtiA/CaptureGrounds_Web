@@ -93,11 +93,11 @@
                                 </p>
                             @endif
 
-                            <p>
+                            {{-- <p>
                                 <a href="{{ route('profile') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
                                     role="menuitem">Profile</a>
-                            </p>
+                            </p> --}}
                             <br>
                             @if (Auth::user()->isCustomer())
                             <a href="/CustomerHomePage">
