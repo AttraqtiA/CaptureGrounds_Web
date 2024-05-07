@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\MessageController;
 
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +19,19 @@ use App\Http\Controllers\MessageController;
 
 //====================================== BISA DIAKSES SEMUA ROLE ======================================
 Route::get('/', function () {
-    return view('hire_option');
+    return view('index');
 })->name('index');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/chat', [App\Http\Controllers\MessageController::class, 'chat_page'])->name('chatPage');
+Route::get('/chat', [MessageController::class, 'chat_page'])->name('chatPage');
 
-Route::post('/pm', [App\Http\Controllers\MessageController::class, 'store'])->name('postMessage');
+Route::post('/pm', [MessageController::class, 'store'])->name('postMessage');
 
+// Milik customer
+Route::get('/hire', function () {
+    return view('hire_option');
+})->name('hireOption');
 // <p>
 // <a href="{{ route('profile') }}"
 // class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
