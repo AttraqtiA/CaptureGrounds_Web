@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('gender');
             $table->integer('phoneNumber');
             $table->string('city');
+            $table->string('description');
             $table->string('country');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

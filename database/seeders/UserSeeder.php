@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserSeeder extends Seeder
 {
@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '0812345',
             'city' => 'Semarang',
+            'description'=>'WOWWWWW',
             'country' => 'Indonesia',
             'role_id' => 1, // DI USER FACTORY ROLENYA 1, Admin
             'isLogin' => '0',
@@ -36,6 +37,7 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '7823542',
             'city' => 'Surabaya',
+            'description'=>'wow',
             'country' => 'Indonesia',
             'role_id' => 3, // DI USER FACTORY ROLENYA 3, member
             'isLogin' => '0',
