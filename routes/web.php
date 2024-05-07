@@ -34,7 +34,7 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/chat', [MessageController::class, 'chat_page'])->name('chatPage');
+Route::get('/chat/{id}', [MessageController::class, 'chat_page'])->middleware('auth')->name('chatPage');
 
 Route::post('/pm', [MessageController::class, 'store'])->name('postMessage');
 

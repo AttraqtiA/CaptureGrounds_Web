@@ -25,6 +25,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='resources/js/script.js' defer></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        @media screen and (max-width: 428px) {
+        /* Apply styles only when the screen width is 428px or less */
+        .custom-class {
+            margin-top: 3rem;
+        }
+    }
+    </style>
 </head>
 
 <body>

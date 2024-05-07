@@ -33,21 +33,16 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+
         if ($request->message_content != null) {
             DB::table('messages')->insert([
-                'sender_id' =>  1,
+                'sender_id' =>  Auth::id(),
                 'receiver_id' => $request->receiver_id,
                 'message_content' => $request->message_content,
             ]);
         }
 
-        $message_content = DB::table('messages')
-        ->where('sender_id', 1)
-        ->orWhere('receiver_id', 1)
-        ->orderBy('id')
-        ->get();
-
-        return redirect()->route('chatPage')->with(compact('message_content'));
+        return redirect()->route('chatPage', ['id' => $request->receiver_id,]);
     }
 
     /**
@@ -82,19 +77,28 @@ class MessageController extends Controller
         //
     }
 
-    public function chat_page()
+    public function chat_page($id)
     {
         $user_id = Auth::id();
-        $user_id = 1;
+        $contacted_id = $id;
 
         $message_content = [];
 
         $message_content = DB::table('messages')
-            ->where('sender_id', $user_id)
-            ->orWhere('receiver_id', $user_id)
+            ->where(function($query) use ($user_id, $contacted_id) {
+                $query->where('sender_id', $user_id)
+                        ->where('receiver_id', $contacted_id);
+            })
+            ->orWhere(function($query) use ($user_id, $contacted_id) {
+                $query->where('sender_id', $contacted_id)
+                        ->where('receiver_id', $user_id);
+            })
             ->orderBy('id')
             ->get();
 
-        return view('chat_page', compact('message_content'));
+        $users = DB::table('users')->get();
+        $contacted_user = DB::table('users')->where('id', $id)->first();
+
+        return view('chat_page', compact('message_content', 'users', 'user_id', 'contacted_id', 'contacted_user'));
     }
 }

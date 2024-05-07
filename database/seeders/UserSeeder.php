@@ -50,6 +50,23 @@ class UserSeeder extends Seeder
             'remember_token' => Str::random(10),
         ]);
 
+        User::create([
+            'name' => 'Patrick',
+            'gender' => 'Male',
+            'phoneNumber' => '9331456',
+            'city' => 'Surabaya',
+            'country' => 'Indonesia',
+            'role_id' => 3, // DI USER FACTORY ROLENYA 3, member
+            'isLogin' => '0',
+            'isActive' => '1',
+            'email' => 'patrick@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('patrictganteng'),
+            'isMembership' => false,
+            'profilePicture' => null,
+            'remember_token' => Str::random(10),
+        ]);
+
         // User::factory(3)->create();
     }
 }
