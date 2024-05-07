@@ -93,6 +93,11 @@
                                 </p>
                             @endif
 
+                            <p>
+                                <a href="{{ route('profile') }}"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
+                                    role="menuitem">Profile</a>
+                            </p>
                             <br>
                             @if (Auth::user()->isCustomer())
                             <a href="/CustomerHomePage">
@@ -156,9 +161,8 @@
                 </li>
 
                 <li>
-                    <a href="/"
-                        class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Contact
-                        us</a>
+                    <a href="/chat"
+                        class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Chat</a>
                 </li>
             </ul>
         </div>
