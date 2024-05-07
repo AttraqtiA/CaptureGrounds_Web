@@ -93,11 +93,18 @@
                                 </p>
                             @endif
 
-                            {{-- <p>
-                                <a href="{{ route('profile') }}"
+                            <p>
+                                @if (Auth::user()->isCustomer())
+                                <a href="/CustomerProfile">
+                                @elseif (Auth::user()->isWorker())
+                                <a href="/WorkerProfile">
+                                @endif
+                                <H2
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
-                                    role="menuitem">Profile</a>
-                            </p> --}}
+                                    role="menuitem">Profile
+                                </H2>
+                            </a>
+                            </p>
                             <br>
                             @if (Auth::user()->isCustomer())
                             <a href="/CustomerHomePage">
@@ -145,8 +152,18 @@
                 class="flex flex-col p-4 md:p-0 font-medium rounded-lg bg-neutral-950 md:flex-row md:space-x-8  md:border-0 md:bg-neutral-950">
 
                 <li>
-                    <a href="/"
-                        class="block py-2 pl-3 pr-4 {{ $active_1 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Home</a>
+                    @auth
+
+                    @if (Auth::user()->isCustomer())
+                    <a href="/CustomerHomePage">
+                    @elseif (Auth::user()->isWorker())
+                    <a href="/WorkerHomePage">
+                    @endauth
+                    @else
+                    <a href="/">
+                    @endif
+                       <H2 class="block py-2 pl-3 pr-4 {{ $active_1 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Home</H2>
+                    </a>
                 </li>
 
                 <li>
