@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Route;
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\MessageController;
@@ -13,7 +12,7 @@ use App\Http\Controllers\Worker_profileController;
 
 use App\Http\Controllers\Customer_profileController;
 
-use App\Http\Controllers\MessageController;
+
 
 
 /*
