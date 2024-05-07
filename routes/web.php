@@ -30,8 +30,17 @@ Route::post('/pm', [MessageController::class, 'store'])->name('postMessage');
 
 // Milik customer
 Route::get('/hire', function () {
-    return view('hire_option');
+    return view('Hire.hire_option');
 })->name('hireOption');
+
+Route::get('/hiredetail_dummy', function () {
+    return view('Hire.hire_detail');
+})->name('hireDummy');
+
+Route::get('/hirecheckout_dummy', function () {
+    return view('Hire.hire_checkout');
+})->name('hireCheckout');
+
 // <p>
 // <a href="{{ route('profile') }}"
 // class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"

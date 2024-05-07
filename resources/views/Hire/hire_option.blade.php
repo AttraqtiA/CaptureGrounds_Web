@@ -7,18 +7,18 @@
                     class="bg-transparent text-yellow-400">Hire Options</mark></h1>
         </div>
 
-        <section class="bg-yellow-100 py-4 px-4 md:px-16 ">
-
-
+        <section class="bg-yellow-100 py-16 px-4 md:px-16 ">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="w-full max-w-sm bg-neutral-950 rounded-lg shadow">
-                        <a href="#">
+                    <div class="relative w-full max-w-sm bg-neutral-950 rounded-lg shadow">
+                        @if ($i === 0)
+                        <img class="w-1/2 absolute top-[-12px] left-1/2 transform -translate-x-1/2" src="/images/PopularTag.png">
+                        @endif
+                        <a href="{{ route('hireDummy') }}">
                             <img class="p-8 rounded-t-lg" src="/images/hire_1.png" alt="product image" />
                         </a>
                         <div class="px-5 pb-5">
-                            <a href="#">
+                            <a href="{{ route('hireDummy') }}">
                                 <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Professional
                                     Event Photography</h5>
                             </a>
@@ -51,11 +51,11 @@
                                     </svg>
                                 </div>
                                 <span
-                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">4.0</span>
                             </div>
                             <div class="flex items-center justify-between">
-                                <span class="text-3xl font-bold text-white">$50</span>
-                                <a href="#"
+                                <span class="text-3xl font-bold text-white">$50 /day</span>
+                                <a href="{{ route('hireDummy') }}"
                                     class="text-white bg-yellow-500 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Choose</a>
                             </div>
                         </div>
