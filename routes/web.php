@@ -4,7 +4,14 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\Worker_profileController;
+
+
+use App\Http\Controllers\Customer_profileController;
 
 use App\Http\Controllers\MessageController;
 
@@ -92,4 +99,9 @@ Route::group([
 //=====================================================================================================
 
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController::class, 'index']);
+Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index']);
+Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');
 
