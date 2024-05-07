@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('image')->nullable(false);
             $table->string('description')->nullable(false);
             $table->bigInteger('price')->nullable(false);
+
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();
