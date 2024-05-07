@@ -42,7 +42,9 @@
             @include('layouts.topbar')
         </div>
 
-        <div class="">
+
+        <div class="bg-neutral-200">
+
             @yield('content_page')
         </div>
 

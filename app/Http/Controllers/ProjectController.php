@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\ServiceOrder;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 
@@ -13,7 +14,11 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $customerProjects = ServiceOrder::where('user_id', '3')->paginate(6);
+        return view('customer.CustomerProjectListPage', [
+            'TabTitle' => 'Your Projects',
+            'customerProjects' => $customerProjects,
+        ]);
     }
 
     /**
@@ -35,9 +40,18 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show($id)
     {
-        //
+        $choseProject = ServiceOrder::findOrFail($id);
+        $project = $choseProject->Projects;
+        $urlPhoto = $project->PhotoResults->first()->url;
+        $urlVideo = $project->VideoResults->first()->url;
+        return view('customer.CustomerProjectDetailPage', [
+            'TabTitle' => $choseProject->Services->title,
+            'urlPhoto' => $urlPhoto,
+            'urlVideo' => $urlVideo,
+            'choseProject' => $choseProject,
+        ]);
     }
 
     /**

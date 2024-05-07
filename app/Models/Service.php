@@ -11,13 +11,13 @@ class Service extends Model
 
     protected $guarded = ['id'];
 
-    public function User()
+    public function Users()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function ServiceOrder()
+    public function ServiceOrders()
     {
-        return $this->belongsTo(ServiceOrder::class);
+        return $this->hasMany(ServiceOrder::class, 'service_id', 'id');
     }
 }

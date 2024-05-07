@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('service_orders', function (Blueprint $table) {
             $table->id();
-            $table->date('startingDate');
-            $table->date('endingDate');
-            $table->integer('totalPayment');
-            $table->string('note');
-            $table->string('acceptedStatus');
+            $table->date('startingDate')->nullable(false);
+            $table->date('endingDate')->nullable(false);
+            $table->bigInteger('totalPayment')->nullable(false);
+            $table->string('note')->nullable(true);
+            $table->enum('acceptedStatus',['yes','no'])->default('no');
+            $table->enum('finishedStatus',['yes','no'])->default('no');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->unsignedBigInteger('services_id');
-            $table->foreign('services_id')->references('id')->on('services')->onUpdate('cascade');
+            $table->unsignedBigInteger('service_id');
+            $table->foreign('service_id')->references('id')->on('services')->onUpdate('cascade');
             $table->timestamps();
         });
     }

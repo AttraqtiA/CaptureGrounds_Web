@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('photo_results', function (Blueprint $table) {
+        Schema::create('photoresult', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('projects_id');
-            $table->foreign('projects_id')->references('id')->on('projects')->onUpdate('cascade');
-            $table->string('url');
+            $table->unsignedBigInteger('project_id');
+            $table->foreign('project_id')->references('id')->on('projects')->onUpdate('cascade');
+            $table->string('url')->nullable(false);
             $table->timestamps();
         });
     }

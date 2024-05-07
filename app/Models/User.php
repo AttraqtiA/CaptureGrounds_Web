@@ -40,44 +40,55 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function isAdmin(): bool{
+    public function isAdmin(): bool
+    {
         if ($this->role_id == 1) {
             return true;
+        }
+        return false;
     }
-    return false;
-}
-    public function isWorker(): bool{
-    if ($this->role_id == 2) {
-        return true;
+
+    public function isWorker(): bool
+    {
+        if ($this->role_id == 2) {
+            return true;
+        }
+        return false;
     }
-    return false;
-}
-    public function isCustomer(): bool{
-    if ($this->role_id == 3) {
-        return true;
+
+    public function isCustomer(): bool
+    {
+        if ($this->role_id == 3) {
+            return true;
+        }
+        return false;
     }
-    return false;
-}
+
     public function Projects()
     {
-        return $this->belongsTo(Project::class);
+        return $this->hasMany(Project::class, 'user_id', 'id');
     }
-    public function ServiceOrder()
+
+    public function ServiceOrders()
     {
-        return $this->belongsTo(ServiceOrder::class);
+        return $this->hasMany(ServiceOrder::class, 'user_id', 'id');
     }
-    public function Service()
+
+    public function Services()
     {
-        return $this->belongsTo(Service::class);
+        return $this->hasMany(Service::class, 'user_id', 'id');
     }
+
     public function Order()
     {
         return $this->belongsTo(Order::class);
     }
+
     public function Posts()
     {
         return $this->belongsTo(Post::class);
     }
+
     public function UserField()
     {
         return $this->belongsTo(UserField::class);

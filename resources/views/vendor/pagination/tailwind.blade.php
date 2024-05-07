@@ -22,10 +22,10 @@
             @endif
         </div>
 
-        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div class="hidden sm:flex-1 sm:flex sm:items-center">
             <div>
                 <p class="text-sm text-gray-700 leading-5 mr-4">
-                    {!! __('Menampilkan') !!}
+                    {!! __('Showing') !!}
                     @if ($paginator->firstItem())
                         <span class="font-medium">{{ $paginator->firstItem() }}</span>
                         {!! __('-') !!}
@@ -33,9 +33,9 @@
                     @else
                         {{ $paginator->count() }}
                     @endif
-                    {!! __('dari') !!}
+                    {!! __('of') !!}
                     <span class="font-medium">{{ $paginator->total() }}</span>
-                    {!! __('pencarian') !!}
+                    {!! __('searches') !!}
                 </p>
             </div>
 

@@ -31,6 +31,14 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// LOFERVER
+Route::get('/projectList', [App\Http\Controllers\ProjectController::class, 'index'])->name('projectList.index');
+Route::get('/projectList/{project}', [App\Http\Controllers\ProjectController::class, 'show'])->name('projectList.show');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/chat/{id}', [MessageController::class, 'chat_page'])->middleware('auth')->name('chatPage');
@@ -105,4 +113,3 @@ Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController
 Route::get('/WorkerProfile', [App\Http\Controllers\Worker_profileController::class, 'profile']);
 Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index']);
 Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');
-
