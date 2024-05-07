@@ -55,6 +55,7 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '9331456',
             'city' => 'Surabaya',
+            'description' => "DAMN!",
             'country' => 'Indonesia',
             'role_id' => 3, // DI USER FACTORY ROLENYA 3, member
             'isLogin' => '0',

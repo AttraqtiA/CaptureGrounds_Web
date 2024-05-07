@@ -11,7 +11,7 @@
                 @foreach ($users as $users)
                     @if ($users->id != $user_id)
                         <li class="py-2 flex items-center">
-                            <img src="/path/to/person-logo.svg" class="h-6 w-6 mr-2" alt="Person Logo">
+                            <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" class="h-6 w-6 mr-2" alt="Person Logo">
                             <a href="{{ route('chatPage', ['id' => $users->id]) }}">
                                 @if ($users->id == $contacted_id)
                                     <strong>
@@ -30,7 +30,7 @@
     {{-- ================================= --}}
 
     {{-- =======Chatbar Goes Here!!======= --}}
-    <div class="max-h-[calc(100vh-5rem)] z-40 mt-20 sm:ml-64 overflow-y-auto custom-class">
+    <div class="h-[calc(100vh-5rem)] z-40 mt-20 sm:ml-64 overflow-y-auto custom-class">
         <div class="">
             <div class="flex items-center p-4 border-b bg-neutral-950">
                 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar"
@@ -51,7 +51,7 @@
                     @foreach ($message_content as $msg)
                         <div class="flex @if ($msg->sender_id == $user_id) justify-end @else justify-start @endif">
                             <div
-                                class="p-2 rounded-md @if ($msg->sender_id == 1) bg-yellow-400 text-right @else bg-gray-300 @endif">
+                                class="p-2 rounded-md @if ($msg->sender_id == $user_id) bg-yellow-400 text-right  @else bg-gray-300 @endif">
                                 {{ $msg->message_content }}
                             </div>
                         </div>
