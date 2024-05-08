@@ -26,38 +26,23 @@
         <div class="container mx-auto px-4 md:px-0 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-16">What do we<br><span class="text-yellow-400">Offer ?</span></h1>
 
-            <div class="flex flex-col md:flex-row justify-center md:space-x-12 lg:space-x-24">
+            <div class="px-8 flex flex-col md:flex-row justify-around md:space-x-12 lg:space-x-24">
 
-                <div class="rounded-md bg-black p-6 mb-8 md:mb-0">
+                <div class="w-full md:w-1/4 rounded-lg bg-black p-6 mb-8 md:mb-0">
                     <img src="images\Profile (1).png" alt="Logo" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-white font-bold text-lg mb-2">Portfolio Showcase</h3>
-                    <p class="text-white">Photographers and</p>
-                    <p class="text-white">videographers can display</p>
-                    <p class="text-white">their portfolios, allowing</p>
-                    <p class="text-white">customers to view their</p>
-                    <p class="text-white">previous work.</p>
+                    <h3 class="text-white font-bold text-lg">Portfolio Showcase</h3>
+                    <p class="text-white">Photographers and ideographers can display their portfolios, allowing customers to view their previous work.</p>
                 </div>
-                <div class="rounded-md bg-black p-6 mb-8 md:mb-0">
+                <div class="w-full md:w-1/4 rounded-lg bg-black p-6 mb-8 md:mb-0">
                     <img src="images\Vector.png" alt="Logo" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-white font-bold text-lg">Comprehensive</h3>
-                    <h3 class="text-white font-bold text-lg">Search Filters</h3>
-                    <p class="text-white">Customers can easily search</p>
-                    <p class="text-white">for service providers that</p>
-                    <p class="text-white">meet their needs based on</p>
-                    <p class="text-white">location, style, and budget.</p>
+                    <h3 class="text-white font-bold text-lg">Comprehensive Search Filters</h3>
+                    <p class="text-white">Customers can easily search for service providers that meet their needs based on location, style, and budget.</p>
                 </div>
 
-                <div class="rounded-md bg-black p-6 mb-8 md:mb-0">
+                <div class="w-full md:w-1/4 rounded-lg bg-black p-6 mb-8 md:mb-0">
                     <img src="images\Group.png" alt="Logo" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-white font-bold text-lg">Secure Booking</h3>
-                    <h3 class="text-white font-bold text-lg">System</h3>
-                    <p class="text-white">A secure booking system</p>
-                    <p class="text-white">makes it easy for customers</p>
-                    <p class="text-white">to confidently book</p>
-                    <p class="text-white">photographers or</p>
-                    <p class="text-white">videographers, ensuring</p>
-                    <p class="text-white">smooth and secure </p>
-                    <p class="text-white">transactions.</p>
+                    <h3 class="text-white font-bold text-lg">Secure Booking System</h3>
+                    <p class="text-white">A secure booking system makes it easy for customers to confidently book photographers or videographers, ensuring smooth and secure transactions.</p>
                 </div>
             </div>
         </div>
@@ -79,6 +64,7 @@
 
     </div>
 </section>
+
 
     @include('layouts.jumbotron_register')
 @endsection

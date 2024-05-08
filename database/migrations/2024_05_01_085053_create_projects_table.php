@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+
             $table->string('title')->nullable(false);
             $table->string('description')->nullable(false);
             $table->date('date')->nullable(false);
             $table->time('workDuration')->nullable(false);
             $table->string('location')->nullable(false);
+
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('serviceOrder_id');

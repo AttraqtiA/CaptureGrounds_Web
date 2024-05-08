@@ -11,7 +11,7 @@
                 @auth
                     @if (Auth::user()->isAdmin())
                         <li>
-                            <a href="{{ route('admin.admin') }}"
+                            {{-- <a href="{{ route('admin.admin') }}" --}}
                                 class="block py-2 pl-3 pr-4 {{ $active_5 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">
                                 <svg class="w-6 h-6 text-white hover:text-yellow-400" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -20,7 +20,7 @@
                                     <path
                                         d="M17 7A7 7 0 1 0 3 7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V7a5 5 0 1 1 10 0v7.083A2.92 2.92 0 0 1 12.083 17H12a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1.993 1.993 0 0 0 1.722-1h.361a4.92 4.92 0 0 0 4.824-4H17a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z" />
                                 </svg>
-                            </a>
+                            {{-- </a> --}}
                         </li>
                     @endif
                 @endauth
@@ -93,13 +93,31 @@
                                 </p>
                             @endif
 
+                            <p>
+                                @if (Auth::user()->isCustomer())
+                                <a href="/CustomerProfile">
+                                @elseif (Auth::user()->isWorker())
+                                <a href="/WorkerProfile">
+                                @endif
+                                <H2
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400"
+                                    role="menuitem">Profile
+                                </H2>
+                            </a>
+                            </p>
                             <br>
+                            @if (Auth::user()->isCustomer())
+                            <a href="/CustomerHomePage">
+                            @elseif (Auth::user()->isWorker())
+                            <a href="/WorkerHomePage">
+                            @endif
                             <p class="text-sm text-neutral-950" role="none">
                                 {{ Auth::user()->name }}
                             </p>
                             <p class="text-sm font-medium text-neutral-950 truncate" role="none">
                                 {{ Auth::user()->email }}
                             </p>
+                        </a>
                         </div>
                         <ul class="py-1" role="none">
                             <li>
@@ -134,8 +152,18 @@
                 class="flex flex-col p-4 md:p-0 font-medium rounded-lg bg-neutral-950 md:flex-row md:space-x-8  md:border-0 md:bg-neutral-950">
 
                 <li>
-                    <a href="/"
-                        class="block py-2 pl-3 pr-4 {{ $active_1 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Home</a>
+                    @auth
+
+                    @if (Auth::user()->isCustomer())
+                    <a href="/CustomerHomePage">
+                    @elseif (Auth::user()->isWorker())
+                    <a href="/WorkerHomePage">
+                    @endauth
+                    @else
+                    <a href="/">
+                    @endif
+                       <H2 class="block py-2 pl-3 pr-4 {{ $active_1 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Home</H2>
+                    </a>
                 </li>
 
                 <li>
@@ -150,9 +178,8 @@
                 </li>
 
                 <li>
-                    <a href="/"
-                        class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Contact
-                        us</a>
+                    <a href="/chat"
+                        class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Chat</a>
                 </li>
             </ul>
         </div>

@@ -21,9 +21,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite/dist/datepicker.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='resources/js/script.js' defer></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        @media screen and (max-width: 428px) {
+        /* Apply styles only when the screen width is 428px or less */
+        .custom-class {
+            margin-top: 3rem;
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -32,7 +42,9 @@
             @include('layouts.topbar')
         </div>
 
+
         <div class="bg-neutral-200">
+
             @yield('content_page')
         </div>
 

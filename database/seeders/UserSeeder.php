@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserSeeder extends Seeder
 {
@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '0812345',
             'city' => 'Semarang',
+            'description'=>'WOWWWWW',
             'country' => 'Indonesia',
             'profilePicture' => null,
             'email' => 'admin_cg@gmail.com',
@@ -36,6 +37,7 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '0812345',
             'city' => 'Surabaya',
+            'description'=>'wow',
             'country' => 'Indonesia',
             'profilePicture' => null,
             'email' => 'worker_cg@gmail.com',
@@ -62,6 +64,24 @@ class UserSeeder extends Seeder
             'isActive' => '1',
             'isMembership' => '0',
             'role_id' => 3,
+            'remember_token' => Str::random(10),
+        ]);
+
+        User::create([
+            'name' => 'Patrick',
+            'gender' => 'Male',
+            'phoneNumber' => '9331456',
+            'city' => 'Surabaya',
+            'description' => "DAMN!",
+            'country' => 'Indonesia',
+            'role_id' => 3, // DI USER FACTORY ROLENYA 3, member
+            'isLogin' => '0',
+            'isActive' => '1',
+            'email' => 'patrick@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('patrictganteng'),
+            'isMembership' => false,
+            'profilePicture' => null,
             'remember_token' => Str::random(10),
         ]);
 
