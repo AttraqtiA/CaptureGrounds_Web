@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\ServiceOrder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class ServiceOrderSeeder extends Seeder
 {
@@ -21,7 +21,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'yes',
             'finishedStatus' => 'yes',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -32,7 +32,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -43,7 +43,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -54,7 +54,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -65,7 +65,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -76,7 +76,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -87,7 +87,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -98,7 +98,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
 
         ServiceOrder::create([
@@ -109,7 +109,7 @@ class ServiceOrderSeeder extends Seeder
             'acceptedStatus' =>  'no',
             'finishedStatus' => 'no',
             'user_id' => 3,
-            'service_id' => 1
+            'services_id' => 1
         ]);
     }
 }

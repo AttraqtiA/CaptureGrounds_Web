@@ -38,7 +38,7 @@
 
                         <div class="bg-black rounded-lg shadow-md p-4 mb-4">
                             <p class="text-lg font-bold text-yellow-400 text-center">Favorite Services</p>
-                            <p class="text-lg font-bold text-white text-center">{{ $mostprefferedservice }}</p>
+                            <p class="text-lg font-bold text-white text-center">{{ $mostprefferedservice->title }}</p>
                         </div>
                     </div>
 
