@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Service;
 use App\Models\ServiceOrder;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
@@ -15,7 +16,7 @@ class ProjectController extends Controller
     public function index()
     {
         $customerProjects = ServiceOrder::where('user_id', '3')->paginate(6);
-        return view('customer.CustomerProjectListPage', [
+        return view('customer.CustomerProjectListPage',[
             'TabTitle' => 'Your Projects',
             'customerProjects' => $customerProjects,
         ]);
