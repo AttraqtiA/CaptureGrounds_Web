@@ -13,7 +13,7 @@ class PhotoResultsSeeder extends Seeder
      */
     public function run(): void
     {
-        PhotoResults::create([
+        photoresults::create([
             'project_id'=> 1,
             'url' => 'photoResultExample.jpg'
         ]);

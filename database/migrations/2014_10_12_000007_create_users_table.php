@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
 
             $table->string('name')->nullable(false);
-            $table->string('gender')->nullable(false);
-            $table->bigInteger('phoneNumber')->nullable(false);
-            $table->string('city')->nullable(false);
-            $table->string('country')->nullable(false);
+            $table->string('gender')->nullable(true);
+            $table->bigInteger('phoneNumber')->nullable(true);
+            $table->string('city')->nullable(true);
+            $table->string('description')->nullable(true);
+            $table->string('country')->nullable(true);
             $table->string('profilePicture')->nullable(true); // AKU SET NULLABLE YA INI
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
