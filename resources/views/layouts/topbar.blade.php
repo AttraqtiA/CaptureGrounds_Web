@@ -178,7 +178,7 @@
                 </li>
 
                 <li>
-                    <a href="/chat"
+                    <a href="{{route('HomeToChat')}}"
                         class="block py-2 pl-3 pr-4 {{ $active_4 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Chat</a>
                 </li>
             </ul>
