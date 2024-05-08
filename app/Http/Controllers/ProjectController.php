@@ -47,7 +47,6 @@ class ProjectController extends Controller
         $urlPhoto = $project->PhotoResults->first()->url;
         $urlVideo = $project->VideoResults->first()->url;
         return view('customer.CustomerProjectDetailPage', [
-            'TabTitle' => $choseProject->Services->title,
             'urlPhoto' => $urlPhoto,
             'urlVideo' => $urlVideo,
             'choseProject' => $choseProject,

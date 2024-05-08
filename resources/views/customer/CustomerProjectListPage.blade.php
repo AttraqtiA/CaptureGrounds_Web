@@ -7,8 +7,12 @@
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center">
             @foreach ($customerProjects as $customerProject)
                 <div class="w-full rounded-lg shadow bg-white relative text-center md:text-left">
+                    @if ($customerProject->Services)
                     <img class="rounded-lg w-full" src="/images/{{ $customerProject->Services->image }}"
                         alt="{{ $customerProject->Services->title }}" />
+                        @else
+                        <img class="rounded-lg w-full" src="/images/serviceExample.png" />
+                        @endif
                     @if ($customerProject->acceptedStatus == 'yes')
                         <span
                             class="m-3 absolute top-0 right-0 bg-green-100 text-green-800 text-sm sm:text-md font-medium px-2.5 py-0.5 rounded-full m-2 dark:bg-green-900 dark:text-green-300">Accepted</span>
@@ -27,7 +31,12 @@
                     @endif
                     <div class="p-5">
                         <h5 class="mb-4 text-2xl font-bold tracking-tight text-gray-900">
+                            @if ($customerProject->Services)
                             {{ $customerProject->Services->title }}</h5>
+                                @else
+                                Professional Event Photography</h5>
+                                @endif
+
                         <p class="mb-2 text-md font-medium text-gray-700">Date started: <span
                                 class="font-bold text-yellow-400">{{ $customerProject->startingDate }}</span></p>
                         <p class="mb-2 text-md font-medium text-gray-700">Date ended: <span
