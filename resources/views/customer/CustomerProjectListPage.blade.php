@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content_page')
-    <div class=" pt-36 md:pt-40 lg:pt-40 p-10 md:p-12 lg:p-20 mx-auto">
+    <div class="pt-36 md:pt-40 lg:pt-40 p-10 md:p-12 lg:p-20 mx-auto">
         <h1 class="mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 text-2xl md:text-5xl text-center">
             Your <span class="underline underline-offset-3 decoration-8 decoration-yellow-400">Projects</span></h1>
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center">

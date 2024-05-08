@@ -15,7 +15,7 @@ class ServiceSeeder extends Seeder
     {
         Service::create([
             'title' => 'Professional Event Photography',
-            'image' => 'serviceExample.png',
+            'image' => 'servicesExample.png',
             'description' => 'Capture your event beautifully with professional photography services. High-quality images delivered promptly.',
             'price' => 800000,
             'user_id' => 2
