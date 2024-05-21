@@ -75,15 +75,32 @@
                 <div class="text-center mb-4">
                     <h2 class="text-2xl font-bold text-black">Your <span class="text-yellow-400">Services</span></h2>
                 </div>
+                <div class="flex justify-center mt-4">
+                    <form method="GET" action="{{ route('create_service') }}">
+                        <button type="submit" class="bg-yellow-500 text-black font-bold py-2 px-4 rounded hover:bg-yellow-600 focus:outline-none focus:shadow-outline">
+                            create
+                        </button>
+                    </form>
+                </div>
                 <div class="flex flex-wrap justify-center lg:flex-col">
                     <div class="container mx-auto flex flex-col lg:flex-row">
                         <div class="w-full lg:w-1/2 px-2 mb-4">
 
                             @foreach ($allservice as $ser)
                             <div class="bg-black rounded-lg shadow-md ">
-                                <img src="images/{{ $ser->images }}" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                                <img src="{{ asset('storage/' . $ser['image']) }}" class="w-full h-48 object-cover rounded-t-lg mb-4">
                                 <h3 class="text-xl font-bold text-center text-yellow-400 p-4">{{ $ser->title }}</h3>
                                 <p class="text-white font-bold text-center p-2">{{ $ser->description }}</p>
+                                <div class="flex space-x-4">
+                                    <a href="{{ route('edit_service', $ser) }}">
+                                        <button class="bg-yellow-500 text-black font-bold py-2 px-4 rounded hover:bg-yellow-600" id="edit" name="edit">Edit</button>
+                                    </a>
+                                    <form action="{{ route('service_destroy', $ser) }}" method="POST">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600 mt-2 md:mt-0" id="delete" name="delete">Delete</button>
+                                    </form>
+                                </div>
                             </div>
                             @endforeach
 

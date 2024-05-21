@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\Worker_profileController;
 
 
@@ -44,6 +45,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/chat/{id}', [MessageController::class, 'chat_page'])->middleware('auth')->name('chatPage');
 Route::get('/homeToChat', [MessageController::class, 'home_to_chat'])->middleware('auth')->name('HomeToChat');
 Route::post('/pm', [MessageController::class, 'store'])->name('postMessage');
+
+// Milik customer
+Route::get('/create_service',[ServiceController::class,'create'])->name('create_service');
+Route::post('/service_store',[ServiceController::class,'store'])->name('service_store');
+Route::get('/edit/{service}', [ServiceController::class,'edit'])->name('edit_service');
+Route::put('/update/{service}', [ServiceController::class,'update'])->name('service_update');
+Route::delete('/service_destroy/{service}',[ServiceController::class,'destroy'])->name('service_destroy');
 
 // Milik customer
 Route::get('/hire', function () {
@@ -111,5 +119,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController::class, 'index']);
 Route::get('/WorkerProfile', [App\Http\Controllers\Worker_profileController::class, 'profile']);
-Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index']);
+Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index'])->name('WorkerHomePage');
 Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');

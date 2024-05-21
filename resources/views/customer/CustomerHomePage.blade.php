@@ -2,8 +2,7 @@
 
 @section('content_page')
 
-<section class="pt-20 w-full bg-white">
-
+<section class="pt-20 w-full bg-neutral-200">
     <div class="bg-black p-10 gap-10 " style="background-image: url('')">
 
         <img src="images/reinhart-julian-WxM465oM4j4-unsplash.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full mb-8 lg:float-left lg:mb-0 border-4 border-yellow-400 gap-3">
@@ -16,7 +15,7 @@
         </div>
         </div>
     </div>
-    <div class="p-9">
+    <div class="p-9 bg-neutral-200">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 

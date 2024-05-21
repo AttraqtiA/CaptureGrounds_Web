@@ -74,7 +74,6 @@
                 <div class="text-center mb-4">
                     <h2 class="text-2xl font-bold text-black">{{ $user->name }}’s Project <span class="text-yellow-400"></span></h2>
                 </div>
-
                 <div class=" justify-center lg:flex-col grid grid-cols-1">
                     <div class="container mx-auto flex flex-col lg:flex-row">
                         <div class="w-full px-2 mb-7">
