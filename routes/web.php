@@ -45,6 +45,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/chat/{id}', [MessageController::class, 'chat_page'])->middleware('auth')->name('chatPage');
 Route::get('/homeToChat', [MessageController::class, 'home_to_chat'])->middleware('auth')->name('HomeToChat');
 Route::post('/pm', [MessageController::class, 'store'])->name('postMessage');
+Route::get('/dashboard', [Worker_profileController::class, 'dashboard'])->name('dashboard');
 
 // Milik customer
 Route::get('/create_service',[ServiceController::class,'create'])->name('create_service');

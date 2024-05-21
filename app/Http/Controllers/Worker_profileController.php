@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Review;
 use App\Models\Project;
-
 use App\Models\Service;
 use App\Models\ServiceOrder;
 use Illuminate\Support\Facades\DB;
@@ -124,9 +124,14 @@ class Worker_profileController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function dashboard()
     {
-        //
+        $currentDate = Carbon::now()->format('Y-m-d');
+        $serviceIds = Service::where('user_id', Auth::id())->pluck('id');
+        $currentOrders = ServiceOrder::whereIn('services_id', $serviceIds)
+            ->whereDate('created_at', $currentDate)
+            ->get();
+        return view('worker.dashboard', ['currentorder' => $currentOrders]);
     }
 
     /**
