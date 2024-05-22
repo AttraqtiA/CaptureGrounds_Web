@@ -125,3 +125,4 @@ Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 
 
 Route::get('/order_history', [App\Http\Controllers\Worker_profileController::class, 'order_history']);
 Route::get('/customer_preview', [App\Http\Controllers\Worker_profileController::class, 'customer_preview']);
+Route::get('/search_bar', [App\Http\Controllers\Customer_profileController::class, 'search_bar']);
