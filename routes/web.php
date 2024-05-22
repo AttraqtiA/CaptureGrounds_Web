@@ -122,3 +122,5 @@ Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController
 Route::get('/WorkerProfile', [App\Http\Controllers\Worker_profileController::class, 'profile']);
 Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index'])->name('WorkerHomePage');
 Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');
+
+Route::get('/order_history', [App\Http\Controllers\Worker_profileController::class, 'order_history']);

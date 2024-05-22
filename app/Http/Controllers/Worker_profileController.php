@@ -142,6 +142,10 @@ class Worker_profileController extends Controller
         //
     }
 
+    public function order_history() {
+        return view('worker.order_history');
+    }
+
     /**
      * Display the specified resource.
      */
