@@ -41,7 +41,7 @@
             </table>
         </div>
 
-        <h1 class="text-3xl font-bold mb-6">Orders List:</h1>
+        <h1 class="text-3xl font-bold my-6">Orders List:</h1>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-md text-left rtl:text-right text-white dark:text-white">
                 <thead class="text-lg text-black uppercase bg-yellow-400 dark:bg-yellow-400 dark:text-black">
@@ -82,6 +82,38 @@
                         <td class="px-8 py-6 text-right">
                             <a href="#" class="font-bold text-red-700 dark:text-red-600 hover:underline">REFUSE</a>
                         </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 class="text-3xl font-bold my-6">Orders History:</h1>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-md text-left rtl:text-right text-white dark:text-white">
+                <thead class="text-lg text-black uppercase bg-yellow-400 dark:bg-yellow-400 dark:text-black">
+                    <tr>
+                        <th scope="col" class="px-8 py-4">Customer</th>
+                        <th scope="col" class="px-8 py-4">Service</th>
+                        <th scope="col" class="px-8 py-4">Starting Date</th>
+                        <th scope="col" class="px-8 py-4">Ending Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-neutral-950 dark:border-neutral-950">
+                        <th scope="row" class="px-8 py-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <a href="/customer_preview" class="hover:underline">Samuel</a>
+                        </th>
+                        <td class="px-8 py-6">Holiday Photographer</td>
+                        <td class="px-8 py-6">1 June</td>
+                        <td class="px-8 py-6">15 June</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-neutral-950 dark:border-neutral-950">
+                        <th scope="row" class="px-8 py-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <a href="/customer_preview" class="hover:underline">Yobel</a>
+                        </th>
+                        <td class="px-8 py-6">Fashion Photography</td>
+                        <td class="px-8 py-6">16 June</td>
+                        <td class="px-8 py-6">18 June</td>
                     </tr>
                 </tbody>
             </table>
