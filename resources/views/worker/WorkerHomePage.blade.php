@@ -55,11 +55,7 @@
                         </div>
                     </div>
 
-
-
                 </div>
-
-
                     <div class = "bg-white rounded-lg shadow-md p-8 mb-4">
                     <input type="text" placeholder="Search..." class="w-full bg-white mt-4 px-4 py-2 rounded-lg focus:outline-none">
                 </div>

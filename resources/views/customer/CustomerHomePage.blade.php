@@ -79,7 +79,7 @@
                         </a> --}}
                         <div class="flex items-center space-x-4">
                             <input type="text" placeholder="Search..." class="flex-grow bg-white px-4 py-2 rounded-lg focus:outline-none">
-                            <a href="#">
+                            <a href="/search_bar">
                                 <button class="text-black bg-blue-200 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded focus:outline-none">
                                     Search for Workers
                                 </button>

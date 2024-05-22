@@ -43,6 +43,10 @@ class Customer_profileController extends Controller
         return view('customer.CustomerHomePage',['user'=>$user, 'recommended'=>$usersss, 'project'=>$project, 'usageDuration'=>$usageDuration, 'allprojects'=>$allprojects, 'mostServiceOrdersWorker'=>$mostServiceOrdersWorker]);
     }
 
+    public function search_bar() {
+        return view('customer.WorkerSuggestionSearcher');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
