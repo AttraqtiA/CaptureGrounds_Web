@@ -19,7 +19,6 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '0812345',
             'city' => 'Semarang',
-            'description'=>'WOWWWWW',
             'country' => 'Indonesia',
             'profilePicture' => null,
             'email' => 'admin_cg@gmail.com',
@@ -37,7 +36,6 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
             'phoneNumber' => '0812345',
             'city' => 'Surabaya',
-            'description'=>'wow',
             'country' => 'Indonesia',
             'profilePicture' => null,
             'email' => 'worker_cg@gmail.com',
@@ -56,7 +54,7 @@ class UserSeeder extends Seeder
             'phoneNumber' => '0812345',
             'city' => 'Surabaya',
             'country' => 'Indonesia',
-            'profilePicture' => null,
+            'profilePicture' => 'customerProfilePictureExample.jpg',
             'email' => 'customer_cg@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('customerCaptureGrounds'),
@@ -66,25 +64,6 @@ class UserSeeder extends Seeder
             'role_id' => 3,
             'remember_token' => Str::random(10),
         ]);
-
-        User::create([
-            'name' => 'Patrick',
-            'gender' => 'Male',
-            'phoneNumber' => '9331456',
-            'city' => 'Surabaya',
-            'description' => "DAMN!",
-            'country' => 'Indonesia',
-            'role_id' => 3, // DI USER FACTORY ROLENYA 3, member
-            'isLogin' => '0',
-            'isActive' => '1',
-            'email' => 'patrick@gmail.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('patrictganteng'),
-            'isMembership' => false,
-            'profilePicture' => null,
-            'remember_token' => Str::random(10),
-        ]);
-
         // User::factory(3)->create();
     }
 }

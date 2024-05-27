@@ -38,6 +38,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // LOFERVER
 Route::get('/projectList', [App\Http\Controllers\ProjectController::class, 'index'])->name('projectList.index');
 Route::get('/projectList/{project}', [App\Http\Controllers\ProjectController::class, 'show'])->name('projectList.show');
+Route::post('/projectList/review/{serviceOrder}', [App\Http\Controllers\ReviewController::class, 'store'])->name('review.store');
+Route::patch('/projectList/review/{serviceOrder}', [App\Http\Controllers\ReviewController::class, 'update'])->name('review.update');
+Route::delete('/projectList/review/{serviceOrder}', [App\Http\Controllers\ReviewController::class, 'destroy'])->name('review.destroy');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -72,12 +75,6 @@ Route::group([
     'prefix' => 'admin',
     'as' => 'admin.'
 ], function () {
-
-
-
-
-
-
 });
 //=====================================================================================================
 
@@ -99,7 +96,6 @@ Route::group([
     'prefix' => 'customer',
     'as' => 'customer.'
 ], function () {
-
 });
 Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController::class, 'index']);
 Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');

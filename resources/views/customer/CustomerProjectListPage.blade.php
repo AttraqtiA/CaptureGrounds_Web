@@ -35,28 +35,15 @@
                         <p class="mb-6 text-md font-medium text-gray-700">Total payment: <span
                                 class="font-bold text-yellow-400">Rp.
                                 {{ number_format($customerProject->totalPayment) }}</span></p>
-                        @if ($customerProject->finishedStatus == 'yes')
                         <a href="{{ route('projectList.show', ['project' => $customerProject->id]) }}"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-900 rounded-lg focus:ring-4 focus:outline-none">
-                                Project Detail
-                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        @else
-                            <a href="#"
-                                class="cursor-not-allowed inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg focus:ring-4 focus:outline-none"
-                                disabled>
-                                Project Detail
-                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        @endif
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-900 rounded-lg focus:ring-4 focus:outline-none">
+                            Project Detail
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             @endforeach
