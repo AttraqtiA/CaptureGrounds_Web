@@ -13,7 +13,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $postingan = Post::all();
+        
     }
 
     /**

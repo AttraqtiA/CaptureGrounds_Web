@@ -71,10 +71,10 @@ class LoginController extends Controller
             return redirect()->route('index'); // bisa buat ke halaman khusus admin aja
         } else if (Auth::attempt($worker, true)) {
             $this->isLogin(Auth::id());
-            return redirect()->route('index'); // TIDAK PERLU SLASH / soalnya udah ->name('home') di routes/web.php, mau ke student_list udh kuset sih
+            return redirect()->route('WorkerHomePage'); // TIDAK PERLU SLASH / soalnya udah ->name('home') di routes/web.php, mau ke student_list udh kuset sih
         } else if (Auth::attempt($customer, true)) {
             $this->isLogin(Auth::id());
-            return redirect()->route('index');
+            return redirect()->route('CustomerHomePage');
         }
 
         return redirect()->route('login')->with('error', 'Email atau password salah!');

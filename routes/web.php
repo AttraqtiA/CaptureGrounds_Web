@@ -47,12 +47,19 @@ Route::get('/homeToChat', [MessageController::class, 'home_to_chat'])->middlewar
 Route::post('/pm', [MessageController::class, 'store'])->name('postMessage');
 Route::get('/dashboard', [Worker_profileController::class, 'dashboard'])->name('dashboard');
 
-// Milik customer
+// Milik Worker
 Route::get('/create_service',[ServiceController::class,'create'])->name('create_service');
 Route::post('/service_store',[ServiceController::class,'store'])->name('service_store');
 Route::get('/edit/{service}', [ServiceController::class,'edit'])->name('edit_service');
 Route::put('/update/{service}', [ServiceController::class,'update'])->name('service_update');
 Route::delete('/service_destroy/{service}',[ServiceController::class,'destroy'])->name('service_destroy');
+
+//Milik Customer
+Route::get('/Create_Recruitment',[ServiceController::class,'create'])->name('Create_Recruitment');
+Route::post('/Recruitment_store',[ServiceController::class,'store'])->name('Recruitment_store');
+Route::get('/edit/{Recruitment}', [ServiceController::class,'edit'])->name('edit_Recruitment');
+Route::put('/update/{Recruitment}', [ServiceController::class,'update'])->name('Recruitment_update');
+Route::delete('/Recruitment_destroy/{Recruitment}',[ServiceController::class,'destroy'])->name('Recruitment_destroy');
 
 // Milik customer
 Route::get('/hire', function () {
@@ -118,7 +125,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController::class, 'index']);
+Route::get('/CustomerHomePage', [App\Http\Controllers\Customer_profileController::class, 'index'])->name("CustomerHomePage");
 Route::get('/WorkerProfile', [App\Http\Controllers\Worker_profileController::class, 'profile']);
 Route::get('/WorkerHomePage', [App\Http\Controllers\Worker_profileController::class, 'index'])->name('WorkerHomePage');
 Route::get('/user/{id}', [App\Http\Controllers\Worker_profileController::class, 'clicked'])->middleware('auth')->name('worker_profile');
