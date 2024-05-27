@@ -5,9 +5,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ServiceController;
+
 use App\Http\Controllers\Worker_profileController;
 
 
@@ -55,11 +57,12 @@ Route::put('/update/{service}', [ServiceController::class,'update'])->name('serv
 Route::delete('/service_destroy/{service}',[ServiceController::class,'destroy'])->name('service_destroy');
 
 //Milik Customer
-Route::get('/Create_Recruitment',[ServiceController::class,'create'])->name('Create_Recruitment');
-Route::post('/Recruitment_store',[ServiceController::class,'store'])->name('Recruitment_store');
-Route::get('/edit/{Recruitment}', [ServiceController::class,'edit'])->name('edit_Recruitment');
-Route::put('/update/{Recruitment}', [ServiceController::class,'update'])->name('Recruitment_update');
-Route::delete('/Recruitment_destroy/{Recruitment}',[ServiceController::class,'destroy'])->name('Recruitment_destroy');
+Route::get('/view_all_recruitment',[PostController::class,'index'])->name('View_Recruitment');
+Route::get('/Create_Recruitment',[PostController::class,'create'])->name('Create_Recruitment');
+Route::post('/Recruitment_store',[PostController::class,'store'])->name('Recruitment_store');
+Route::get('/edit/{Recruitment}', [PostController::class,'edit'])->name('edit_Recruitment');
+Route::put('/update/{Recruitment}', [PostController::class,'update'])->name('Recruitment_update');
+Route::delete('/Recruitment_destroy/{Recruitment}',[PostController::class,'destroy'])->name('Recruitment_destroy');
 
 // Milik customer
 Route::get('/hire', function () {
