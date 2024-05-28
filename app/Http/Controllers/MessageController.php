@@ -101,4 +101,15 @@ class MessageController extends Controller
 
         return view('chat_page', compact('message_content', 'users', 'user_id', 'contacted_id', 'contacted_user'));
     }
+
+    public function home_to_chat() {
+        $user_id = Auth::id();
+
+        $random_id = DB::table('users')
+                    ->whereNotIn('id', [$user_id])
+                    ->inRandomOrder()
+                    ->value('id');
+
+        return redirect()->route('chatPage', ['id' => $random_id]);
+    }
 }

@@ -64,6 +64,7 @@ class UserSeeder extends Seeder
             'role_id' => 3,
             'remember_token' => Str::random(10),
         ]);
+
         // User::factory(3)->create();
     }
 }

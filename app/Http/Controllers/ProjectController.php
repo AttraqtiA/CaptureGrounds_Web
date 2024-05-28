@@ -18,7 +18,7 @@ class ProjectController extends Controller
     public function index()
     {
         $customerProjects = ServiceOrder::where('user_id', '3')->paginate(6);
-        return view('customer.CustomerProjectListPage', [
+        return view('customer.CustomerProjectListPage',[
             'TabTitle' => 'Your Projects',
             'customerProjects' => $customerProjects,
         ]);

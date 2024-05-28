@@ -12,7 +12,7 @@ class ServiceOrder extends Model
 
     public function Services()
     {
-        return $this->belongsTo(Service::class, 'service_id', 'id');
+        return $this->belongsTo(Service::class, 'services_id', 'id');
     }
 
     public function Projects()

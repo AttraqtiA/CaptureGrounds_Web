@@ -18,6 +18,6 @@ class Service extends Model
 
     public function ServiceOrders()
     {
-        return $this->hasMany(ServiceOrder::class, 'service_id', 'id');
+        return $this->hasMany(ServiceOrder::class, 'services_id', 'id');
     }
 }

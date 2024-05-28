@@ -13,7 +13,7 @@ class VideoResultsSeeder extends Seeder
      */
     public function run(): void
     {
-        VideoResults::create([
+        videoresults::create([
             'project_id'=> 1,
             'url' => 'videoResultExample.mp4'
         ]);

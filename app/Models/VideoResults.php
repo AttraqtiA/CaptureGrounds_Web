@@ -10,7 +10,7 @@ class VideoResults extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    protected $table = 'VideoResult';
+    protected $table = 'videoresults';
 
     public function Projects() {
         return $this->belongsTo(Project::class, 'project_id', 'id');

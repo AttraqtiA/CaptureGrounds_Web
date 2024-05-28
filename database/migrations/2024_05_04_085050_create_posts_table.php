@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('minimumPrice');
             $table->integer('maximumPrice');
             $table->string('location');
-            $table->string('photographerType');
-            $table->string('videographerType');
+            $table->unsignedBigInteger('field_id');
+            $table->foreign('field_id')->references('id')->on('fields')->onUpdate('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();
