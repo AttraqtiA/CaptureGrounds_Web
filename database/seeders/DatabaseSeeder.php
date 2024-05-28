@@ -25,7 +25,8 @@ class DatabaseSeeder extends Seeder
             ServiceOrderSeeder::class,
             ProjectSeeder::class,
             PhotoResultsSeeder::class,
-            VideoResultsSeeder::class
+            VideoResultsSeeder::class,
+            ReviewSeeder::class,
         ]);
 
         Message::create([

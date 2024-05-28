@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Review;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\ServiceOrder;
@@ -47,10 +49,25 @@ class ProjectController extends Controller
         $project = $choseProject->Projects;
         $urlPhoto = $project->PhotoResults->first()->url;
         $urlVideo = $project->VideoResults->first()->url;
-        return view('customer.CustomerProjectDetailPage', [
+        $worker_id = $choseProject->Services->user_id;
+        $services = Service::where('user_id', $worker_id)->get();
+        $reviews = Review::where('serviceOrder_id', $id)->paginate(6);
+        $users = User::findOrFail(3);
+        $check_reviews = Review::whereHas('ServiceOrders', function($query) use ($id) {
+            $query->where('id', $id)->whereHas('Users', function($subquery) {
+                $subquery->where('id', 3);
+            });
+        })->first();
+            return view('customer.CustomerProjectDetailPage', [
+            'TabTitle' => $choseProject->Services->title,
+            'choseProject' => $choseProject,
+            'project' => $project,
             'urlPhoto' => $urlPhoto,
             'urlVideo' => $urlVideo,
-            'choseProject' => $choseProject,
+            'services' => $services,
+            'reviews' => $reviews,
+            'users' => $users,
+            'check_reviews' => $check_reviews
         ]);
     }
 
