@@ -60,7 +60,7 @@ Route::put('/update/{service}', [ServiceController::class,'update'])->name('serv
 Route::delete('/service_destroy/{service}',[ServiceController::class,'destroy'])->name('service_destroy');
 
 //Milik Customer
-Route::get('/view_all_recruitment',[PostController::class,'index'])->name('View_Recruitment');
+Route::get('/View_Recruitment',[PostController::class,'index'])->name('View_Recruitment');
 Route::get('/Create_Recruitment',[PostController::class,'create'])->name('Create_Recruitment');
 Route::post('/Recruitment_store',[PostController::class,'store'])->name('Recruitment_store');
 Route::get('/edit/{Recruitment}', [PostController::class,'edit'])->name('edit_Recruitment');
