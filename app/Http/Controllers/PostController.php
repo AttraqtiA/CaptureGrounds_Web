@@ -58,7 +58,7 @@ class PostController extends Controller
                 'user_id'=> Auth::id()
             ]);
         }
-        return redirect()->route('WorkerHomePage');
+        return redirect()->route('View_Recruitment');
     }
 
     /**
@@ -98,7 +98,7 @@ class PostController extends Controller
                 'user_id'=> Auth::id()
             ]);
         }
-        return redirect()->route('WorkerHomePage');
+        return redirect()->route('View_Recruitment');
     }
 
     /**
@@ -113,6 +113,6 @@ class PostController extends Controller
         }
         $post->delete();
 
-        return redirect()->route('WorkerHomePage');
+        return redirect()->route('View_Recruitment');
     }
 }

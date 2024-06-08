@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content_page')
-<section class="pt-20 w-full bg-neutral-200">
 <div class="container mx-auto py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach($posts as $post)
