@@ -171,15 +171,15 @@
                             class="block py-2 pl-3 pr-4 {{ $active_3 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Dashboard</a>
                     </li>
                     <li>
-                        <a href="dashboard"
+                        <a href="View_Recruitment"
                             class="block py-2 pl-3 pr-4 {{ $active_3 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Recruitment</a>
                     </li>
                 @endif
                 @if (Auth::user()->isCustomer())
-                    <li>
-                        <a href="dashboard"
-                            class="block py-2 pl-3 pr-4 {{ $active_5 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Recruit</a>
-                    </li>
+                <li>
+                    <a href="View_Recruitment"
+                        class="block py-2 pl-3 pr-4 {{ $active_3 ?? 'text-white rounded hover:bg-yellow-400 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 md:hover:bg-transparent' }}">Recruitment</a>
+                </li>
                 @endif
             @endauth
             <li>
