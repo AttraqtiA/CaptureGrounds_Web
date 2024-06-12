@@ -70,7 +70,8 @@ class PostController extends Controller
      */
     public function edit(Post $post){
         $ServiceEdit = Post::where('id',$post->id)->first();
-        return view('worker.edit_service',['Recruitment' => $post]);
+        $field = Field::all();
+        return view('customer.EditRecruitment',['post' => $post,'fields'=>$field]);
     }
     public function update(Request $request, Post $post){
         $validateData=$request->validate([

@@ -63,9 +63,10 @@ Route::delete('/service_destroy/{service}',[ServiceController::class,'destroy'])
 Route::get('/View_Recruitment',[PostController::class,'index'])->name('View_Recruitment');
 Route::get('/Create_Recruitment',[PostController::class,'create'])->name('Create_Recruitment');
 Route::post('/Recruitment_store',[PostController::class,'store'])->name('Recruitment_store');
-Route::get('/edit/{Recruitment}', [PostController::class,'edit'])->name('edit_Recruitment');
-Route::put('/update/{Recruitment}', [PostController::class,'update'])->name('Recruitment_update');
-Route::delete('/Recruitment_destroy/{Recruitment}',[PostController::class,'destroy'])->name('Recruitment_destroy');
+Route::get('/edit_recruit/{post}', [PostController::class,'edit'])->name('edit_post');
+Route::patch('/update_post/{post}', [PostController::class, 'update'])->name('update_post');
+Route::delete('/post_destroy/{post}',[PostController::class,'destroy'])->name('destroy_post');
+
 
 // Milik customer
 Route::get('/hire', function () {
